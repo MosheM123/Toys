@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 from django.contrib.postgres.fields import ArrayField
 import django.contrib.postgres.fields
-from picklefield.fields import PickledObjectField
 
 
 # Create your models here.
