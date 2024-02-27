@@ -50,15 +50,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'myweb.urls'
+DATABASES = {
+    'default':{
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME': 'test3',
+        'USER': 'moni3',
+        'PASSWORD': 'Mertelya2',
+    }
+}
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.core.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.request",
-)
+ROOT_URLCONF = 'myweb.urls'
 
 TEMPLATES = [
     {
@@ -82,18 +83,10 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#database
 
-DATABASES = {
-    'default':{
-        'ENGINE':'django.db.backends.postgresql',
-        'NAME': 'test3',
-        'USER': 'moni3',
-        'PASSWORD': 'Mertelya2',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'easypay.Customer
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -122,9 +115,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-
-AUTH_USER_MODEL = 'easypay.Customer'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
