@@ -15,7 +15,7 @@ mc_url="https://api.thingspeak.com/update?api_key=8R3CO2HRXMICK3VK&field1="
 def hi(request):
     products = Products.objects.all().values()
     products2 = Products_Sale.objects.all().values()
-    template = loader.get_template('authentication/landpage.html')
+    template = loader.get_template('members/authentication/landpage.html')
     context = {
     'products': products,
     'products2':products2,
